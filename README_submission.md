@@ -1,0 +1,7 @@
+# Lab 17 Submission
+
+Trong practice set, long-term memory la layer quan trong nhat: no phuc hoi preference, open loop, recency va user isolation cho E02, E03, E08, E09; no cung la mot nua evidence cua E07. Ket qua student dat 11/11 PASS. Episodic, semantic va short-term cung dat 100%, nen khong co layer nao thap hon layer khac trong lan chay nay.
+
+E02 retrieve nhieu nhat, 741 token. E07 can long-term va semantic: preference Python cua Minh ket hop voi Idempotency-Key trong payment retry rule. Token reduction trung binh cua memory-enabled la 14.2%, trong khi no-memory la 81.8%; no-memory giam token cao vi retrieve gan nhu khong co evidence, nen hit rate chi 18.2%. Token reduction chi co y nghia khi di cung evidence hit rate.
+
+Zep Context Block va graph search giam cong tu xay retrieval, cross-session summary, fact recency va provenance. Redis + Qdrant hop cho baseline/local control, nhung can tu lo schema, indexing, TTL, vector retrieval va isolation. Guardrail chong memory poisoning: chi ghi khi user consent, tach user scope voi semantic graph chung, luu source/timestamp/confidence, uu tien fact moi hon nhung giu provenance, review high-impact updates va khong cho heartbeat tu them quyen hay instruction.
